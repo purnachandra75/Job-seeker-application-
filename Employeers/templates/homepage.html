@@ -1,0 +1,16 @@
+ {% extends  'base.html' %}
+{%block title %}
+welcome
+{%endblock%}
+
+{% block content %}
+
+
+   <h1>welocme {{user}} .........!!!!!!!</h1>
+    <a href="{% url 'createempprofile' %}">createprofile</a><br/>
+    <a href="{% url 'createjobpost' %}">createJobPost</a><br/>
+    <a href="{% url 'listofjobs' user%}">List of Jobs Posted</a><br/>
+    <a href ="{% url 'searchingforjobseeker' %}">search for jobseckers</a>
+
+    
+{% endblock %}
