@@ -1,0 +1,26 @@
+.header-component{
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+}
+.footer{
+    border: 1px black solid;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: rgb(55, 61, 55);
+    color: white;
+    
+}
+ul{
+    display: flex;
+        
+    margin-right: 15px;
+    
+    
+}
+li{
+    margin-right: 15px;
+    
+}

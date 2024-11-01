@@ -1,0 +1,27 @@
+{% extends  'base.html' %}
+{%block title %}
+welcome
+{%endblock%}
+
+{% block content %}
+        <div style="margin: 20px;">
+        <p>this is welocome page....!!!</p>
+        <a href="{% url 'createprofile' %}">Creating new profile</a><br/>
+        <a href="{% url 'Viewprofile' %}">view Profile</a><br/>
+        <a>Search the Job openings</a><br/>
+        <a href="{% url 'appliedjobs' user%}">view Applied jobs</a><br/>
+      </div>
+      {% for job in jobs %}
+      <div style="border: 1px black solid; margin-left: 30px;margin-right: 30px;">
+      <strong>Job Title:</strong> {{ job.title }}<br/>
+      <strong>Description:</strong> {{ job.description }}<br/>
+      <strong>Job Type:</strong> {{ job.job_type }}<br/>
+      <strong>Minimum Salary:</strong> {{ job.salary_min }}<br/>
+      <strong>Maximum Salary:</strong> {{ job.salary_max }}<br/>
+      <strong>Location:</strong> {{ job.location }}<br/>
+      <strong>Required Skills:</strong> {{ job.required_skills }}<br/>
+      <strong>Years of Experience:</strong> {{ job.experience }}<br/><br/>
+      <a href="{% url 'applicant'  job.id user%}">Apply</a><br/><br/><br/>
+       </div> 
+      {% endfor %}
+{% endblock %}
